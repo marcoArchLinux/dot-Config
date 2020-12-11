@@ -1,4 +1,7 @@
 Dot-Configs for,
+
 bspwm
 polybar
 sxhkd
+picom/compton
+fish
