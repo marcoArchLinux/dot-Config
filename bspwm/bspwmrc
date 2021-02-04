@@ -3,8 +3,8 @@
 # Autostart
 # xrandr -s 1920x1080 &
 pgrep -x sxhkd > /dev/null || sxhkd &
-bash ~/.config/polybar/launch.sh &
-nitrogen --restore &
+bash ~/.config/polybar/launch/Elysium.sh &
+#feh --bg-fill $HOME/Pictures/wallpapers/elysium.jpg &
 
 bspc monitor -d I II III IV V VI
 
@@ -22,5 +22,4 @@ bspc config focus_follows_pointer true
 xsetroot -cursor_name left_ptr &
 
 picom
-glava --desktop
-xscreensaver -no-splash
+glava --desktop 

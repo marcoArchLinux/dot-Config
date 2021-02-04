@@ -1,22 +1,22 @@
 
 # Reload sxhkd
 super + Escape
-        pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd
 
 # exit bspwm
 
 super + shift + {q,r}
     bspc {quit,wm -r}
-
+    
 super + Return
     kitty
-# run programs
-super + {r,w}
-  rofi -show {run,drun}
+# run programs 
+super + r
+  rofi -show drun
 
 super + shift + c
     bspc node -c
-
+    
 super + shift + {b,f,t}
     {brave,pcmanfm,qps}
 
@@ -30,32 +30,20 @@ super + ctrl + {z,x}
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} focused:'^{1-9,10}'
 
+#Change theme
+
+super + ctrl + {1,2}
+	bash /home/marco/.config/polybar/launch/{Elysium.sh,Tartarus.sh}
+
 # cycle bspwm modes
 
 super + space
-        bspc desktop -l next
+	bspc desktop -l next
 
 # Toggle fullscreen
 
 super + {f,t}
-        bspc node -t {fullscreen,tiled}
-
-# bspwm monocle mode
-
-super + alt {a,d}
-        bspc node -f {next,prev}
-
-# Expand windows
-super + ctrl + {Left,Down,Up,Right}
-        bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-# Shrink windows
-super + alt + {Left,Down,Up,Right}
-        bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# Move floating windows
-super + shift + {Left,Down,Up,Right}
-        bspc node -v {-50 0,0 50,0 -50,50 0}
+	bspc node -t {fullscreen,tiled}
 
 # bspwm monocle mode
 
